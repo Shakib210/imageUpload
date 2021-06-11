@@ -3,12 +3,14 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 const imageModel = new Schema({
   image: {
-    name: String,
-    image: Buffer,
+    size: Number,
+    img: Buffer,
+    contentType:String
   },
   name:{
-      type: String,
+    type:String
   }
+  
 });
 
 const ImageModel = mongoose.model("image", imageModel);

@@ -72,7 +72,7 @@ const uploadController = asyncHandler(async (req, res) => {
     img: Buffer(encodedImage, "base64"),
   };
 
-  const response =  ImageModel.create({ 'image':Buffer(encodedImage, "base64"), 'name':'shakib' });
+  const response =  ImageModel.create({ image, 'name':'shakib' });
   res.json(response);
   });
 
